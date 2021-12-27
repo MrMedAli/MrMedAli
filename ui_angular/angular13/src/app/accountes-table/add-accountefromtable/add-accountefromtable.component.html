@@ -1,0 +1,23 @@
+
+
+    <div class="d-flex align-items-start flex-column justify-content-center">
+        <h6 class="mb-0 text-sm">Banque</h6>
+        <p class="mb-0 text-xs">  <input type="text" class="form-control" [(ngModel)]="BankName"
+            placeholder="Banque"></p>
+      
+    </div>
+    <div class="d-flex align-items-start flex-column justify-content-center">
+        <h6 class="mb-0 text-sm">solde</h6>
+        <p class="mb-0 text-xs"><input type="text" class="form-control" [(ngModel)]="AccounteBalance"
+            placeholder="solde"></p>
+        
+    </div>
+    <div class="d-flex align-items-start flex-column justify-content-center">
+        <h6 class="mb-0 text-sm">libellé</h6>
+        <p class="mb-0 text-xs">  <input type="text" class="form-control" [(ngModel)]="Wording"
+            placeholder="libellé"></p>
+        
+    </div>
+    <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" (click)="addAccount()" *ngIf="alert==0" href="javascript:;">Ajouter</a>
+
+    <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" (click)="updateAccount()" *ngIf="acc.AccounteId!=0"  href="javascript:;">Update</a>

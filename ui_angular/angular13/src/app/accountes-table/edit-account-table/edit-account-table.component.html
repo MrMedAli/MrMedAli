@@ -1,0 +1,27 @@
+<div class="d-flex"><a href="javascript:;" class="text-secondary font-weight-bold text-xs w-100 px-3 mb-2 " data-toggle="tooltip" data-original-title="Edit user"(click)="open(mymodal)"data-backdrop="static"
+    data-keyboard="false">
+        Editer
+      </a>
+    <a href="javascript:;" class="text-secondary font-weight-bold text-xs w-100 px-3 mb-2 " data-toggle="tooltip" data-original-title="Edit user"(click)="deleteClick(acc)"data-backdrop="static"
+      data-keyboard="false">
+          suprimer
+    </a>
+      
+         </div>
+
+
+   
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Modifier un compte</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <app-add-accountefromtable [acc]="acc"></app-add-accountefromtable>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+  </div>
+</ng-template>
